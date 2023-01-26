@@ -11,7 +11,6 @@ phases:
       - echo Installing Serverless CLI
       - npm i -g serverless@2
       - echo Installing dependencies
-      - cd notes
       - npm install
 
   build:
@@ -29,4 +28,4 @@ artifacts:
 
 cache:
   paths:
-    - 'notes/node_modules/*'
+    - 'node_modules/*'
