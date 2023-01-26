@@ -8,17 +8,17 @@ phases:
     runtime-versions:
       nodejs: 14
     commands:
-      - echo Installing Serverless CLI
+      # Installing Serverless CLI
       - npm i -g serverless@2
-      - echo Installing dependencies
+      # Installing dependencies
       - npm install
 
   build:
     on-failure: ABORT
     commands:
-      - echo Run test
+      # Run test
       - npm run test
-      - echo Packaging the service
+      # Packaging the service
       - serverless package --package my-artifact--stage dev
 
 artifacts:
